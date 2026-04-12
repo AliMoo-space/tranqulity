@@ -1,0 +1,140 @@
+screen:
+  name: chat
+  children:
+  - type: container
+    width: 430.0
+    height: 60.0
+    background: '#284243'
+    id: 12:8701
+    x: 4998.0
+    y: 3469.0
+  - type: text
+    value: About Work
+    id: 12:8702
+    x: 5156.0
+    y: 3488.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: stack
+    id: 12:8703
+    x: 5012.0
+    y: 4325.0
+    background: '#000000'
+    width: 403.0
+    height: 60.0
+    children:
+    - type: container
+      width: 329.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 12:8704
+      x: 5012.0
+      y: 4325.0
+    - type: text
+      value: write your message
+      id: 12:8705
+      x: 5028.0
+      y: 4344.0
+      size: 18.0
+      fontWeight: 500
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: icon
+      name: Ellipse 9
+      id: 12:8706
+      url: assets/icons/ellipse_9.svg
+      width: 60.0
+      height: 60.0
+    - type: icon
+      name: send_message
+      id: 12:8707
+      url: assets/icons/send_message.svg
+      width: 32.0
+      height: 32.0
+  - type: button
+    label: Hello How are you?
+    id: 12:8711
+    x: 5203.0
+    y: 3867.0
+    background: '#284243'
+    radius: 16.0
+    width: 198.0
+    height: 42.0
+  - type: button
+    label: I feel upset
+    id: 12:8713
+    x: 5290.0
+    y: 4061.0
+    background: '#284243'
+    radius: 16.0
+    width: 127.0
+    height: 42.0
+  - type: icon
+    name: ep:back
+    id: 12:8715
+    url: assets/icons/epback.svg
+    width: 24.0
+    height: 24.0
+  - type: icon
+    name: menu
+    id: 12:8718
+    url: assets/icons/menu.svg
+    width: 24.0
+    height: 24.0
+  - type: stack
+    id: 12:8721
+    x: 5004.0
+    y: 4119.0
+    background: '#000000'
+    width: 408.0
+    height: 174.0
+    children:
+    - type: button
+      label: I'm sorry to hear that you're feeling upset. If you'd like, you can share
+        what's on your mind, and I'm here to listen and offer support or guidance
+        if you need it. Remember, it's okay to feel upset sometimes, and it's important
+        to take care of yourself.
+      id: 12:8722
+      x: 5047.0
+      y: 4119.0
+      background: '#ADADAD'
+      radius: 16.0
+      width: 365.0
+      height: 174.0
+    - type: icon
+      name: Ellipse 101
+      id: 12:8724
+      url: assets/icons/ellipse_101.svg
+      width: 36.0
+      height: 36.0
+  - type: stack
+    id: 12:8725
+    x: 5004.0
+    y: 3925.0
+    background: '#000000'
+    width: 408.0
+    height: 120.0
+    children:
+    - type: button
+      label: Hello! I'm just a computer program, so I don't have feelings in the same
+        way humans do, but I'm here and ready to assist you. How can I help you today?
+      id: 12:8726
+      x: 5047.0
+      y: 3925.0
+      background: '#284243'
+      radius: 16.0
+      width: 365.0
+      height: 120.0
+    - type: image
+      name: 836f78052abc75e0834feebf41488d7c30fbec00
+      id: 12:8728
+      url: assets/images/robot.png
+      width: 36.0
+      height: 36.0
+      x: 5004.0
+      y: 3925.0

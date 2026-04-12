@@ -1,0 +1,175 @@
+screen:
+  name: empty_chats
+  children:
+  - type: stack
+    id: 12:8689
+    x: 4454.0
+    y: 2527.0
+    background: '#000000'
+    width: 314.0
+    height: 247.0
+    children:
+    - type: stack
+      id: 12:8690
+      x: 4504.0
+      y: 2527.0
+      background: '#000000'
+      width: 200.0
+      height: 200.0
+      children:
+      - type: icon
+        name: Vector
+        id: 12:8691
+        url: assets/icons/vector_12_8691.svg
+        width: 171.8843536376953
+        height: 159.33059692382812
+    - type: column
+      id: 12:8692
+      x: 4462.5
+      y: 2735.0
+      spacing: 8.0
+      background: '#000000'
+      width: 297.0
+      height: 24.0
+      children:
+      - type: text
+        value: You don’t have any Chats yet.
+        id: 12:8693
+        x: 4462.5
+        y: 2735.0
+        size: 20.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#000000'
+        align: center
+  - type: row
+    id: 12:8694
+    x: 4396.0
+    y: 3057.0
+    padding: 37.0
+    spacing: 220.0
+    background: '#284243'
+    width: 430.0
+    height: 59.0
+    children:
+    - type: column
+      id: I12:8694;91:55
+      x: 4461.0
+      y: 3066.0
+      spacing: 2.0
+      background: '#000000'
+      width: 34.0
+      height: 41.0
+      children:
+      - type: icon
+        name: ph:chats-circle-thin
+        id: I12:8694;91:48
+        url: assets/icons/phchats-circle-thin.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Chats
+        id: I12:8694;91:54
+        x: 4461.0
+        y: 3092.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+    - type: column
+      id: I12:8694;91:82
+      x: 4589.0
+      y: 3066.0
+      spacing: 2.0
+      background: '#000000'
+      width: 41.0
+      height: 41.0
+      children:
+      - type: icon
+        name: iconamoon:profile-thin
+        id: I12:8694;91:83
+        url: assets/icons/iconamoonprofile-thin.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Quotes
+        id: I12:8694;91:87
+        x: 4589.0
+        y: 3092.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+    - type: column
+      id: I12:8694;158:306
+      x: 4724.0
+      y: 3066.0
+      spacing: 2.0
+      background: '#000000'
+      width: 37.0
+      height: 41.0
+      children:
+      - type: icon
+        name: profile
+        id: I12:8694;158:307
+        url: assets/icons/profile.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Profile
+        id: I12:8694;158:311
+        x: 4724.0
+        y: 3092.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+  - type: stack
+    id: 12:8695
+    x: 4750.0
+    y: 2891.0
+    background: '#000000'
+    width: 60.0
+    height: 136.0
+    children:
+    - type: icon
+      name: Frame 41
+      id: I12:8695;12:8667
+      url: assets/icons/frame_41.svg
+      width: 60.0
+      height: 60.0
+    - type: icon
+      name: teenyicons:chatbot-outline
+      id: I12:8695;12:8669
+      url: assets/icons/teenyiconschatbot-outline.svg
+      width: 24.0
+      height: 24.0
+  - type: row
+    id: 12:8696
+    x: 4396.0
+    y: 2208.0
+    padding: 24.0
+    spacing: 24.0
+    background: '#000000'
+    width: 430.0
+    height: 29.0
+    children:
+    - type: icon
+      name: majesticons:menu
+      id: 12:8697
+      url: assets/icons/majesticonsmenu.svg
+      width: 24.0
+      height: 24.0
+    - type: text
+      value: Chats
+      id: 12:8699
+      x: 4468.0
+      y: 2208.0
+      size: 24.0
+      fontWeight: 700
+      fontFamily: Inter
+      color: '#101010'
+      align: left

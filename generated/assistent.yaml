@@ -1,0 +1,118 @@
+screen:
+  name: assistent
+  children:
+  - type: container
+    width: 430.0
+    height: 399.0
+    background: '#284243'
+    id: 12:8766
+    x: 4461.0
+    y: 3469.0
+  - type: icon
+    name: teenyicons:chatbot-outline
+    id: 12:8767
+    url: assets/icons/teenyiconschatbot-outline.svg
+    width: 157.0
+    height: 157.0
+  - type: text
+    value: Hey!
+    id: 12:8769
+    x: 4622.0
+    y: 3746.0
+    size: 50.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#284243'
+    align: left
+  - type: text
+    value: I’am your Personal Assistent
+    id: 12:8770
+    x: 4481.0
+    y: 3816.0
+    size: 24.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#284243'
+    align: center
+  - type: button
+    label: Start Chat
+    id: 12:8771
+    x: 4485.0
+    y: 4048.0
+    background: '#284243'
+    radius: 16.0
+    width: 382.0
+    height: 54.0
+  - type: button
+    label: Start Chat
+    id: 12:8773
+    x: 4485.0
+    y: 4043.0
+    background: '#284243'
+    radius: 16.0
+    width: 382.0
+    height: 54.0
+  - type: text
+    value: Make New Chat
+    id: 12:8775
+    x: 4483.0
+    y: 3916.0
+    size: 22.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#284243'
+    align: left
+  - type: icon
+    name: ep:back
+    id: 12:8776
+    url: assets/icons/epback.svg
+    width: 24.0
+    height: 24.0
+  - type: stack
+    id: 12:8779
+    x: 4485.0
+    y: 3959.0
+    background: '#000000'
+    width: 382.0
+    height: 60.0
+    children:
+    - type: icon
+      name: Rectangle 14
+      id: 12:8780
+      url: assets/icons/rectangle_14.svg
+      width: 382.0
+      height: 60.0
+    - type: text
+      value: Enter The Title Of Chat
+      id: 12:8781
+      x: 4502.0
+      y: 3979.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+  - type: stack
+    id: 12:8782
+    x: 4485.0
+    y: 3959.0
+    background: '#000000'
+    width: 382.0
+    height: 60.0
+    children:
+    - type: icon
+      name: Rectangle 14
+      id: 12:8783
+      url: assets/icons/rectangle_14.svg
+      width: 382.0
+      height: 60.0
+    - type: text
+      value: Enter The Title Of Chat
+      id: 12:8784
+      x: 4502.0
+      y: 3979.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left

@@ -1,0 +1,203 @@
+screen:
+  name: chats
+  children:
+  - type: stack
+    id: 12:8620
+    x: 4484.0
+    y: 1269.0
+    background: '#000000'
+    width: 384.0
+    height: 52.0
+    children:
+    - type: button
+      label: About Work
+      id: I12:8620;101:264
+      x: 4484.0
+      y: 1269.0
+      background: '#284243'
+      radius: 9.0
+      width: 353.0
+      height: 52.0
+    - type: icon
+      name: uiw:delete
+      id: I12:8620;101:266
+      url: assets/icons/uiwdelete.svg
+      width: 32.00000762939453
+      height: 32.0
+  - type: stack
+    id: 12:8621
+    x: 4484.0
+    y: 1337.0
+    background: '#000000'
+    width: 384.0
+    height: 52.0
+    children:
+    - type: button
+      label: About My Family
+      id: I12:8621;101:264
+      x: 4484.0
+      y: 1337.0
+      background: '#284243'
+      radius: 9.0
+      width: 353.0
+      height: 52.0
+    - type: icon
+      name: uiw:delete
+      id: I12:8621;101:266
+      url: assets/icons/uiwdelete.svg
+      width: 32.00000762939453
+      height: 32.0
+  - type: stack
+    id: 12:8622
+    x: 4485.0
+    y: 1405.0
+    background: '#000000'
+    width: 384.0
+    height: 52.0
+    children:
+    - type: button
+      label: My self
+      id: I12:8622;101:264
+      x: 4485.0
+      y: 1405.0
+      background: '#284243'
+      radius: 9.0
+      width: 353.0
+      height: 52.0
+    - type: icon
+      name: uiw:delete
+      id: I12:8622;101:266
+      url: assets/icons/uiwdelete.svg
+      width: 32.00000762939453
+      height: 32.0
+  - type: row
+    id: 12:8623
+    x: 4461.0
+    y: 2050.0
+    padding: 37.0
+    spacing: 220.0
+    background: '#284243'
+    width: 430.0
+    height: 59.0
+    children:
+    - type: column
+      id: I12:8623;91:55
+      x: 4526.0
+      y: 2059.0
+      spacing: 2.0
+      background: '#000000'
+      width: 34.0
+      height: 41.0
+      children:
+      - type: icon
+        name: chats
+        id: I12:8623;91:48
+        url: assets/icons/chats.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Chats
+        id: I12:8623;91:54
+        x: 4526.0
+        y: 2085.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+    - type: column
+      id: I12:8623;91:82
+      x: 4654.0
+      y: 2059.0
+      spacing: 2.0
+      background: '#000000'
+      width: 41.0
+      height: 41.0
+      children:
+      - type: icon
+        name: iconamoon:profile-thin
+        id: I12:8623;91:83
+        url: assets/icons/iconamoonprofile-thin.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Quotes
+        id: I12:8623;91:87
+        x: 4654.0
+        y: 2085.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+    - type: column
+      id: I12:8623;158:306
+      x: 4789.0
+      y: 2059.0
+      spacing: 2.0
+      background: '#000000'
+      width: 37.0
+      height: 41.0
+      children:
+      - type: icon
+        name: profile
+        id: I12:8623;158:307
+        url: assets/icons/profile.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Profile
+        id: I12:8623;158:311
+        x: 4789.0
+        y: 2085.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+  - type: stack
+    id: 12:8624
+    x: 4815.0
+    y: 1889.0
+    background: '#000000'
+    width: 60.0
+    height: 136.0
+    children:
+    - type: icon
+      name: Frame 41
+      id: I12:8624;12:8667
+      url: assets/icons/frame_41.svg
+      width: 60.0
+      height: 60.0
+    - type: icon
+      name: teenyicons:chatbot-outline
+      id: I12:8624;12:8669
+      url: assets/icons/teenyiconschatbot-outline.svg
+      width: 24.0
+      height: 24.0
+  - type: row
+    id: 12:8625
+    x: 4461.0
+    y: 1201.0
+    padding: 24.0
+    spacing: 24.0
+    background: '#000000'
+    width: 430.0
+    height: 29.0
+    children:
+    - type: icon
+      name: majesticons:menu
+      id: 12:8626
+      url: assets/icons/majesticonsmenu.svg
+      width: 24.0
+      height: 24.0
+    - type: text
+      value: Chats
+      id: 12:8628
+      x: 4533.0
+      y: 1201.0
+      size: 24.0
+      fontWeight: 700
+      fontFamily: Inter
+      color: '#101010'
+      align: left

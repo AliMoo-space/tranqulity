@@ -1,0 +1,111 @@
+screen:
+  name: about_us
+  children:
+  - type: row
+    id: 12:8826
+    x: 3953.0
+    y: 24.0
+    padding: 24.0
+    spacing: 24.0
+    background: '#000000'
+    width: 430.0
+    height: 29.0
+    children:
+    - type: icon
+      name: ep:back
+      id: 12:8827
+      url: assets/icons/epback.svg
+      width: 24.0
+      height: 24.0
+    - type: text
+      value: About Us
+      id: 12:8830
+      x: 4025.0
+      y: 24.0
+      size: 24.0
+      fontWeight: 700
+      fontFamily: Inter
+      color: '#101010'
+      align: left
+  - type: container
+    width: 238.0
+    height: 238.0
+    radius: 16.0
+    id: 12:8831
+    x: 4049.0
+    y: 98.0
+  - type: column
+    id: 12:8832
+    x: 3953.0
+    y: 420.0
+    padding: 16.0
+    spacing: 16.0
+    background: '#000000'
+    width: 429.0
+    height: 574.0
+    children:
+    - type: text
+      value: Welcome to Tranquility – your personal assistant in the digital world.
+        At Tranquility, we believe that everyone deserves a moment of peace and calm
+        amidst the chaos of everyday life. Our mission is to provide a sanctuary where
+        you can unwind, destress, and find solace through meaningful conversations
+        with our AI chatbot.
+      id: 12:8833
+      x: 3969.0
+      y: 436.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: text
+      value: In today's fast-paced world, it's easy to feel overwhelmed and anxious.
+        That's why we've created Tranquility – to offer you a refuge where you can
+        freely express yourself without fear of judgment or interruption. Whether
+        you're seeking advice, a listening ear, or simply some company, our AI chatbot
+        is here to support you every step of the way.
+      id: 12:8834
+      x: 3969.0
+      y: 585.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: text
+      value: Our team is passionate about mental well-being and technology, and we're
+        dedicated to harnessing the power of AI to promote relaxation and mindfulness.
+        With Tranquility, you can embark on a journey of self-discovery, self-care,
+        and self-improvement, all from the comfort of your smartphone.
+      id: 12:8835
+      x: 3969.0
+      y: 753.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: text
+      value: So why wait? Take a deep breath, download Tranquility, and let our AI
+        chatbot guide you on your path to inner peace and tranquility. Together, we
+        can create a brighter, calmer future – one conversation at a time.
+      id: 12:8836
+      x: 3969.0
+      y: 883.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+  - type: text
+    value: 'Welcome to Tranquility
+
+      where relaxation meets innovation.'
+    id: 12:8837
+    x: 4001.0
+    y: 360.0
+    size: 20.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#000000'
+    align: center

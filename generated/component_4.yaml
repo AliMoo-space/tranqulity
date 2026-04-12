@@ -1,0 +1,15 @@
+screen:
+  name: Component 4
+  children:
+  - type: icon
+    name: Frame 41
+    id: 12:8667
+    url: assets/icons/frame_41.svg
+    width: 60.0
+    height: 60.0
+  - type: icon
+    name: teenyicons:chatbot-outline
+    id: 12:8669
+    url: assets/icons/teenyiconschatbot-outline.svg
+    width: 24.0
+    height: 24.0

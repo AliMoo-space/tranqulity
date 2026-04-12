@@ -1,0 +1,77 @@
+screen:
+  name: otp
+  children:
+  - type: container
+    width: 382.0
+    height: 220.0
+    id: 12:8564
+    x: 3429.0
+    y: 2236.0
+  - type: text
+    value: Verification
+    id: 12:8565
+    x: 3429.0
+    y: 2480.0
+    size: 24.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: text
+    value: "Please enter the code sent on your \nemail."
+    id: 12:8566
+    x: 3429.0
+    y: 2517.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#284243'
+    align: left
+  - type: icon
+    name: Rectangle 13
+    id: 12:8567
+    url: assets/icons/rectangle_13.svg
+    width: 83.5
+    height: 60.0
+  - type: icon
+    name: Rectangle 14
+    id: 12:8568
+    url: assets/icons/rectangle_14.svg
+    width: 83.5
+    height: 60.0
+  - type: icon
+    name: Rectangle 15
+    id: 12:8569
+    url: assets/icons/rectangle_15.svg
+    width: 83.5
+    height: 60.0
+  - type: icon
+    name: Rectangle 16
+    id: 12:8570
+    url: assets/icons/rectangle_16.svg
+    width: 83.5
+    height: 60.0
+  - type: container
+    width: 382.0
+    height: 60.0
+    background: '#284243'
+    radius: 8.0
+    id: 12:8571
+    x: 3429.0
+    y: 2717.0
+  - type: text
+    value: Verify
+    id: 12:8572
+    x: 3595.0
+    y: 2736.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#FFFFFF'
+    align: left
+  - type: icon
+    name: ep:back
+    id: 12:8573
+    url: assets/icons/epback.svg
+    width: 24.0
+    height: 24.0

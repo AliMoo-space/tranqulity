@@ -1,0 +1,69 @@
+screen:
+  name: Frame 38
+  children:
+  - type: container
+    width: 385.0
+    height: 273.0
+    background: '#FFFFFF'
+    radius: 16.0
+    id: 12:8797
+    x: 5849.0
+    y: 3469.0
+  - type: text
+    value: Edit Title
+    id: 12:8798
+    x: 5882.0
+    y: 3502.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: container
+    width: 320.0
+    height: 60.0
+    background: '#284243'
+    radius: 8.0
+    id: 12:8799
+    x: 5882.0
+    y: 3559.0
+  - type: stack
+    id: 12:8800
+    x: 5852.0
+    y: 3640.0
+    background: '#000000'
+    width: 382.0
+    height: 60.0
+    children:
+    - type: stack
+      id: 12:8801
+      x: 5883.0
+      y: 3640.0
+      background: '#000000'
+      width: 320.0
+      height: 60.0
+      children:
+      - type: container
+        width: 320.0
+        height: 60.0
+        background: '#284243'
+        radius: 8.0
+        id: 12:8802
+        x: 5883.0
+        y: 3640.0
+      - type: text
+        value: Save
+        id: 12:8803
+        x: 6022.0
+        y: 3659.0
+        size: 18.0
+        fontWeight: 500
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+  - type: icon
+    name: close
+    id: 12:8804
+    url: assets/icons/close.svg
+    width: 24.0
+    height: 24.0

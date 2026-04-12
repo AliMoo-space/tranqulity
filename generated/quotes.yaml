@@ -1,0 +1,150 @@
+screen:
+  name: quotes
+  children:
+  - type: container
+    width: 430.0
+    height: 800.0
+    background: '#D9D9D9'
+    id: 12:8672
+    x: 4940.0
+    y: 1249.0
+  - type: button
+    label: “ The only way to do great work is to love what you do “
+    id: 12:8673
+    x: 4954.0
+    y: 1464.0
+    background: '#FFFFFF'
+    radius: 16.0
+    width: 403.0
+    height: 358.0
+  - type: row
+    id: 12:8682
+    x: 4940.0
+    y: 2050.0
+    padding: 37.0
+    spacing: 220.0
+    background: '#284243'
+    width: 430.0
+    height: 59.0
+    children:
+    - type: column
+      id: I12:8682;91:55
+      x: 5005.0
+      y: 2059.0
+      spacing: 2.0
+      background: '#000000'
+      width: 34.0
+      height: 41.0
+      children:
+      - type: icon
+        name: ph:chats-circle-thin
+        id: I12:8682;91:48
+        url: assets/icons/phchats-circle-thin.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Chats
+        id: I12:8682;91:54
+        x: 5005.0
+        y: 2085.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+    - type: column
+      id: I12:8682;91:82
+      x: 5133.0
+      y: 2059.0
+      spacing: 2.0
+      background: '#000000'
+      width: 41.0
+      height: 41.0
+      children:
+      - type: icon
+        name: quotes
+        id: I12:8682;91:83
+        url: assets/icons/quotes.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Quotes
+        id: I12:8682;91:87
+        x: 5133.0
+        y: 2085.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+    - type: column
+      id: I12:8682;158:306
+      x: 5268.0
+      y: 2059.0
+      spacing: 2.0
+      background: '#000000'
+      width: 37.0
+      height: 41.0
+      children:
+      - type: icon
+        name: profile
+        id: I12:8682;158:307
+        url: assets/icons/profile.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Profile
+        id: I12:8682;158:311
+        x: 5268.0
+        y: 2085.0
+        size: 12.0
+        fontWeight: 400
+        fontFamily: Inter
+        color: '#FFFFFF'
+        align: left
+  - type: stack
+    id: 12:8683
+    x: 5294.0
+    y: 1889.0
+    background: '#000000'
+    width: 60.0
+    height: 136.0
+    children:
+    - type: icon
+      name: Frame 41
+      id: I12:8683;12:8667
+      url: assets/icons/frame_41.svg
+      width: 60.0
+      height: 60.0
+    - type: icon
+      name: teenyicons:chatbot-outline
+      id: I12:8683;12:8669
+      url: assets/icons/teenyiconschatbot-outline.svg
+      width: 24.0
+      height: 24.0
+  - type: row
+    id: 12:8684
+    x: 4940.0
+    y: 1177.0
+    padding: 24.0
+    spacing: 24.0
+    background: '#FFFFFF'
+    width: 430.0
+    height: 72.0
+    children:
+    - type: icon
+      name: majesticons:menu
+      id: 12:8685
+      url: assets/icons/majesticonsmenu.svg
+      width: 24.0
+      height: 24.0
+    - type: text
+      value: Quotes
+      id: 12:8687
+      x: 5012.0
+      y: 1198.5
+      size: 24.0
+      fontWeight: 700
+      fontFamily: Inter
+      color: '#101010'
+      align: left

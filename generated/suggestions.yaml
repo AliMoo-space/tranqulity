@@ -1,0 +1,99 @@
+screen:
+  name: suggestions
+  children:
+  - type: row
+    id: 12:8839
+    x: 3495.0
+    y: 24.0
+    padding: 24.0
+    spacing: 24.0
+    background: '#000000'
+    width: 430.0
+    height: 29.0
+    children:
+    - type: icon
+      name: ep:back
+      id: 12:8840
+      url: assets/icons/epback.svg
+      width: 24.0
+      height: 24.0
+    - type: text
+      value: Suggestions
+      id: 12:8843
+      x: 3567.0
+      y: 24.0
+      size: 24.0
+      fontWeight: 700
+      fontFamily: Inter
+      color: '#101010'
+      align: left
+  - type: column
+    id: 12:8844
+    x: 3565.5
+    y: 103.0
+    spacing: 16.0
+    background: '#000000'
+    width: 289.0
+    height: 215.0
+    children:
+    - type: container
+      width: 170.0
+      height: 170.0
+      id: 12:8845
+      x: 3625.0
+      y: 103.0
+    - type: text
+      value: Tell Us How We Can Help
+      id: 12:8846
+      x: 3565.5
+      y: 289.0
+      size: 24.0
+      fontWeight: 500
+      fontFamily: Inter
+      color: '#000000'
+      align: center
+  - type: container
+    width: 382.0
+    height: 60.0
+    background: '#284243'
+    radius: 8.0
+    id: 12:8847
+    x: 3519.0
+    y: 371.0
+  - type: container
+    width: 382.0
+    height: 157.0
+    background: '#284243'
+    radius: 8.0
+    id: 12:8848
+    x: 3519.0
+    y: 446.0
+  - type: text
+    value: Subject
+    id: 12:8849
+    x: 3535.0
+    y: 391.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: text
+    value: body
+    id: 12:8850
+    x: 3535.0
+    y: 462.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: button
+    label: Send Message
+    id: 12:8851
+    x: 3519.0
+    y: 627.0
+    background: '#000000'
+    radius: 8.0
+    width: 382.0
+    height: 60.0

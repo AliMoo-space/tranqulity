@@ -1,0 +1,199 @@
+screen:
+  name: register
+  children:
+  - type: container
+    width: 382.0
+    height: 60.0
+    background: '#284243'
+    radius: 8.0
+    id: 12:8530
+    x: 2392.0
+    y: 2926.0
+  - type: text
+    value: Sign Up
+    id: 12:8531
+    x: 2549.0
+    y: 2945.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#FFFFFF'
+    align: left
+  - type: text
+    value: Already have an account ?
+    id: 12:8532
+    x: 2432.0
+    y: 3022.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: text
+    value: Login
+    id: 12:8533
+    x: 2667.0
+    y: 3022.0
+    size: 18.0
+    fontWeight: 500
+    fontFamily: Inter
+    color: '#284243'
+    align: left
+  - type: column
+    id: 12:8534
+    x: 2392.0
+    y: 2472.0
+    spacing: 16.0
+    background: '#000000'
+    width: 382.0
+    height: 440.0
+    children:
+    - type: container
+      width: 382.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 12:8536
+      x: 2392.0
+      y: 2472.0
+    - type: icon
+      name: Rectangle 13
+      id: 12:8537
+      url: assets/icons/rectangle_13.svg
+      width: 382.0
+      height: 60.0
+    - type: icon
+      name: Rectangle 14
+      id: 12:8538
+      url: assets/icons/rectangle_14.svg
+      width: 382.0
+      height: 60.0
+    - type: container
+      width: 382.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 12:8539
+      x: 2392.0
+      y: 2700.0
+    - type: container
+      width: 382.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 12:8540
+      x: 2392.0
+      y: 2776.0
+    - type: container
+      width: 382.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 10796:139
+      x: 2392.0
+      y: 2852.0
+    - type: button
+      label: Username
+      id: 3020:9467
+      x: 2392.0
+      y: 2472.0
+      background: '#000000'
+      radius: 8.0
+      width: 382.0
+      height: 60.0
+    - type: text
+      value: Email
+      id: 12:8542
+      x: 2408.0
+      y: 2568.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: text
+      value: Gender
+      id: 12:8543
+      x: 2404.0
+      y: 2720.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: text
+      value: Age
+      id: 12:8544
+      x: 2408.0
+      y: 2644.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: text
+      value: Confirm password
+      id: 12:8546
+      x: 2408.0
+      y: 2873.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: icon
+      name: Frame 170
+      id: 10849:9926
+      url: assets/icons/frame_170.svg
+      width: 24.0
+      height: 24.0
+    - type: icon
+      name: mdi:eye
+      id: 10849:9923
+      url: assets/icons/mdieye.svg
+      width: 24.0
+      height: 24.0
+    - type: text
+      value: Password
+      id: 12:8549
+      x: 2408.0
+      y: 2796.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: icon
+      name: Vector
+      id: 12:8550
+      url: assets/icons/vector_12_8550.svg
+      width: 21.0
+      height: 12.0
+  - type: icon
+    name: ep:back
+    id: 12:8551
+    url: assets/icons/epback.svg
+    width: 24.0
+    height: 24.0
+  - type: stack
+    id: 3024:9468
+    x: 2528.0
+    y: 2278.0
+    background: '#000000'
+    width: 162.1999969482422
+    height: 153.0
+    children:
+    - type: image
+      name: pick_image
+      id: 12:8554
+      url: assets/images/pick_image.png
+      width: 153.0
+      height: 153.0
+      x: 2528.0
+      y: 2278.0
+    - type: icon
+      name: edit
+      id: 12:8559
+      url: assets/icons/edit.svg
+      width: 51.20000076293945
+      height: 51.20000076293945

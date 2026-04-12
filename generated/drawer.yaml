@@ -1,0 +1,92 @@
+screen:
+  name: drawer
+  children:
+  - type: container
+    width: 344.0
+    height: 286.0
+    background: '#284243'
+    id: 12:8630
+    x: 4052.0
+    y: 1177.0
+  - type: image
+    name: img
+    id: 12:8631
+    url: assets/images/img.png
+    width: 160.0
+    height: 160.0
+    x: 4144.0
+    y: 1214.0
+  - type: text
+    value: Sara
+    id: 12:8633
+    x: 4196.0
+    y: 1391.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#FFFFFF'
+    align: left
+  - type: text
+    value: '01027545631'
+    id: 12:8634
+    x: 4172.0
+    y: 1416.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#FFFFFF'
+    align: left
+  - type: column
+    id: 12:8635
+    x: 4068.0
+    y: 1487.0
+    spacing: 16.0
+    background: '#000000'
+    width: 312.0
+    height: 345.0
+    children:
+    - type: button
+      label: About Us
+      id: 12:8636
+      x: 4068.0
+      y: 1487.0
+      background: '#284243'
+      radius: 8.0
+      width: 312.0
+      height: 56.0
+    - type: button
+      label: Rate Our App
+      id: 12:8640
+      x: 4068.0
+      y: 1559.0
+      background: '#284243'
+      radius: 8.0
+      width: 312.0
+      height: 56.0
+    - type: button
+      label: Suggestions
+      id: 12:8644
+      x: 4068.0
+      y: 1631.0
+      background: '#284243'
+      radius: 8.0
+      width: 312.0
+      height: 56.0
+    - type: button
+      label: Enable Easy Login
+      id: 12:8650
+      x: 4068.0
+      y: 1703.0
+      background: '#284243'
+      radius: 8.0
+      width: 312.0
+      height: 57.0
+    - type: button
+      label: Logout
+      id: 12:8657
+      x: 4068.0
+      y: 1776.0
+      background: '#FF3A3A'
+      radius: 8.0
+      width: 312.0
+      height: 56.0

@@ -1,0 +1,273 @@
+screen:
+  name: edit_profile
+  children:
+  - type: stack
+    id: 12:8730
+    x: 5419.0
+    y: 1177.0
+    background: '#FFFFFF'
+    width: 430.0
+    height: 932.0
+    children:
+    - type: container
+      width: 382.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 12:8731
+      x: 5443.0
+      y: 1729.0
+    - type: text
+      value: Save
+      id: 12:8732
+      x: 5613.0
+      y: 1748.0
+      size: 18.0
+      fontWeight: 500
+      fontFamily: Inter
+      color: '#FFFFFF'
+      align: left
+    - type: image
+      name: img
+      id: 12:8733
+      url: assets/images/img.png
+      width: 160.0
+      height: 160.0
+      x: 5554.0
+      y: 1290.0
+    - type: row
+      id: 12:8742
+      x: 5419.0
+      y: 2050.0
+      padding: 37.0
+      spacing: 220.0
+      background: '#284243'
+      width: 430.0
+      height: 59.0
+      children:
+      - type: column
+        id: I12:8742;91:55
+        x: 5484.0
+        y: 2059.0
+        spacing: 2.0
+        background: '#000000'
+        width: 34.0
+        height: 41.0
+        children:
+        - type: icon
+          name: chats
+          id: I12:8742;91:48
+          url: assets/icons/chats.svg
+          width: 24.0
+          height: 24.0
+        - type: text
+          value: Chats
+          id: I12:8742;91:54
+          x: 5484.0
+          y: 2085.0
+          size: 12.0
+          fontWeight: 400
+          fontFamily: Inter
+          color: '#FFFFFF'
+          align: left
+      - type: column
+        id: I12:8742;91:82
+        x: 5612.0
+        y: 2059.0
+        spacing: 2.0
+        background: '#000000'
+        width: 41.0
+        height: 41.0
+        children:
+        - type: icon
+          name: iconamoon:profile-thin
+          id: I12:8742;91:83
+          url: assets/icons/iconamoonprofile-thin.svg
+          width: 24.0
+          height: 24.0
+        - type: text
+          value: Quotes
+          id: I12:8742;91:87
+          x: 5612.0
+          y: 2085.0
+          size: 12.0
+          fontWeight: 400
+          fontFamily: Inter
+          color: '#FFFFFF'
+          align: left
+      - type: column
+        id: I12:8742;158:306
+        x: 5747.0
+        y: 2059.0
+        spacing: 2.0
+        background: '#000000'
+        width: 37.0
+        height: 41.0
+        children:
+        - type: icon
+          name: profile
+          id: I12:8742;158:307
+          url: assets/icons/profile.svg
+          width: 24.0
+          height: 24.0
+        - type: text
+          value: Profile
+          id: I12:8742;158:311
+          x: 5747.0
+          y: 2085.0
+          size: 12.0
+          fontWeight: 400
+          fontFamily: Inter
+          color: '#FFFFFF'
+          align: left
+    - type: icon
+      name: Frame 42
+      id: 12:8743
+      url: assets/icons/frame_42.svg
+      width: 24.0
+      height: 24.0
+    - type: stack
+      id: 12:8744
+      x: 5773.0
+      y: 1889.0
+      background: '#000000'
+      width: 60.0
+      height: 136.0
+      children:
+      - type: icon
+        name: Frame 41
+        id: I12:8744;12:8667
+        url: assets/icons/frame_41.svg
+        width: 60.0
+        height: 60.0
+      - type: icon
+        name: teenyicons:chatbot-outline
+        id: I12:8744;12:8669
+        url: assets/icons/teenyiconschatbot-outline.svg
+        width: 24.0
+        height: 24.0
+    - type: container
+      width: 382.0
+      height: 60.0
+      background: '#284243'
+      radius: 8.0
+      id: 12:8745
+      x: 5443.0
+      y: 1484.0
+    - type: text
+      value: Sara
+      id: 12:8746
+      x: 5461.0
+      y: 1506.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: row
+      id: 12:8747
+      x: 5419.0
+      y: 1201.0
+      padding: 24.0
+      spacing: 24.0
+      alignment: center
+      background: '#000000'
+      width: 430.0
+      height: 29.0
+      children:
+      - type: icon
+        name: majesticons:menu
+        id: 12:8748
+        url: assets/icons/majesticonsmenu.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: edit profile
+        id: 12:8750
+        x: 5491.0
+        y: 1201.0
+        size: 24.0
+        fontWeight: 700
+        fontFamily: Inter
+        color: '#101010'
+        align: left
+  - type: stack
+    id: 12:8751
+    x: 5443.0
+    y: 1810.0
+    background: '#000000'
+    width: 382.0
+    height: 24.0
+    children:
+    - type: text
+      value: Change Password
+      id: 12:8752
+      x: 5443.0
+      y: 1812.0
+      size: 16.0
+      fontWeight: 400
+      fontFamily: Inter
+      color: '#000000'
+      align: left
+    - type: icon
+      name: Iconsax/Linear/edit
+      id: 12:8753
+      url: assets/icons/iconsaxlinearedit.svg
+      width: 24.0
+      height: 24.0
+  - type: icon
+    name: Rectangle 12
+    id: 12:8759
+    url: assets/icons/rectangle_12.svg
+    width: 185.0
+    height: 60.0
+  - type: text
+    value: Female
+    id: 12:8760
+    x: 5656.0
+    y: 1656.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: icon
+    name: Rectangle 13
+    id: 12:8761
+    url: assets/icons/rectangle_13.svg
+    width: 185.0
+    height: 60.0
+  - type: text
+    value: '22'
+    id: 12:8762
+    x: 5459.0
+    y: 1656.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: icon
+    name: arrow_down
+    id: 12:8763
+    url: assets/icons/arrow_down.svg
+    width: 24.0
+    height: 24.0
+  - type: container
+    width: 382.0
+    height: 60.0
+    background: '#284243'
+    radius: 8.0
+    id: 10757:669
+    x: 5443.0
+    y: 1560.0
+  - type: text
+    value: amramer522@gmail.com
+    id: 10757:670
+    x: 5461.0
+    y: 1582.0
+    size: 16.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#000000'
+    align: left

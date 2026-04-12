@@ -1,0 +1,29 @@
+screen:
+  name: splash
+  children:
+  - type: icon
+    name: Ellipse 1
+    id: 12:8459
+    url: assets/icons/ellipse_1.svg
+    width: 360.0
+    height: 360.0
+  - type: text
+    value: Together Towards Tranquility
+    id: 12:8461
+    x: 1023.0
+    y: 1965.0
+    size: 20.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#284243'
+    align: left
+  - type: text
+    value: Tranquility
+    id: 12:8462
+    x: 1054.0
+    y: 1898.0
+    size: 48.0
+    fontWeight: 400
+    fontFamily: Mystery Quest
+    color: '#284243'
+    align: left

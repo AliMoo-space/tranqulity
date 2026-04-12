@@ -1,0 +1,101 @@
+screen:
+  name: choose_image
+  children:
+  - type: container
+    width: 430.0
+    height: 242.0
+    background: '#FFFFFF'
+    id: 12:8812
+    x: 2368.0
+    y: 3224.0
+  - type: text
+    value: Pick Image From...
+    id: 12:8813
+    x: 2392.0
+    y: 3274.0
+    size: 18.0
+    fontWeight: 600
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: row
+    id: 12:8814
+    x: 2457.0
+    y: 3325.0
+    spacing: 72.0
+    background: '#000000'
+    width: 252.0
+    height: 117.0
+    children:
+    - type: stack
+      id: 12:8815
+      x: 2457.0
+      y: 3325.0
+      background: '#000000'
+      width: 90.0
+      height: 117.0
+      children:
+      - type: text
+        value: Camera
+        id: 12:8816
+        x: 2471.0
+        y: 3419.0
+        size: 16.0
+        fontWeight: 600
+        fontFamily: Inter
+        color: '#000000'
+        align: left
+      - type: image
+        name: material-symbols:photo-camera
+        id: 12:8817
+        url: assets/images/material-symbolsphoto-camera.png
+        width: 90.0
+        height: 90.0
+        x: 2457.0
+        y: 3325.0
+    - type: stack
+      id: 12:8819
+      x: 2619.0
+      y: 3325.0
+      background: '#000000'
+      width: 90.0
+      height: 117.0
+      children:
+      - type: text
+        value: Gallery
+        id: 12:8820
+        x: 2637.0
+        y: 3423.0
+        size: 16.0
+        fontWeight: 600
+        fontFamily: Inter
+        color: '#000000'
+        align: left
+      - type: stack
+        id: 12:8821
+        x: 2619.0
+        y: 3325.0
+        background: '#000000'
+        width: 90.0
+        height: 90.0
+        children:
+        - type: stack
+          id: 12:8822
+          x: 2623.687744140625
+          y: 3333.4375
+          background: '#000000'
+          width: 80.62500762939453
+          height: 76.875
+          children:
+          - type: icon
+            name: Vector
+            id: 12:8823
+            url: assets/icons/vector_12_8823.svg
+            width: 80.62500762939453
+            height: 76.875
+          - type: icon
+            name: Vector
+            id: 12:8824
+            url: assets/icons/vector_12_8824.svg
+            width: 16.875
+            height: 16.875

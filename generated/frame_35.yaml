@@ -1,0 +1,69 @@
+screen:
+  name: Frame 35
+  children:
+  - type: container
+    width: 246.0
+    height: 91.0
+    background: '#FFFFFF'
+    radius: 16.0
+    id: 12:8786
+    x: 5442.0
+    y: 3469.0
+  - type: column
+    id: 12:8787
+    x: 5458.0
+    y: 3484.0
+    spacing: 16.0
+    background: '#000000'
+    width: 142.0
+    height: 64.0
+    children:
+    - type: row
+      id: 12:8788
+      x: 5458.0
+      y: 3484.0
+      spacing: 16.0
+      background: '#000000'
+      width: 117.0
+      height: 24.0
+      children:
+      - type: icon
+        name: edit_title
+        id: 12:8789
+        url: assets/icons/edit_title.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Edit Title
+        id: 12:8791
+        x: 5498.0
+        y: 3484.0
+        size: 18.0
+        fontWeight: 500
+        fontFamily: Inter
+        color: '#000000'
+        align: left
+    - type: stack
+      id: 12:8792
+      x: 5458.0
+      y: 3524.0
+      background: '#000000'
+      width: 142.0
+      height: 24.0
+      children:
+      - type: icon
+        name: delete_chat
+        id: 12:8793
+        url: assets/icons/delete_chat.svg
+        width: 24.0
+        height: 24.0
+      - type: text
+        value: Delete Chat
+        id: 12:8795
+        x: 5498.0
+        y: 3524.0
+        size: 18.0
+        fontWeight: 500
+        fontFamily: Inter
+        color: '#FF0000'
+        align: left

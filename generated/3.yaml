@@ -1,0 +1,41 @@
+screen:
+  name: '3'
+  children:
+  - type: container
+    width: 430.0
+    height: 600.0
+    id: 12:8480
+    x: 2905.0
+    y: 1177.0
+  - type: text
+    value: Your Secert is Save
+    id: 12:8481
+    x: 2924.0
+    y: 1801.0
+    size: 32.0
+    fontWeight: 700
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: text
+    value: Our platform prioritizes your privacy and security
+    id: 12:8482
+    x: 2924.0
+    y: 1864.0
+    size: 22.0
+    fontWeight: 400
+    fontFamily: Inter
+    color: '#000000'
+    align: left
+  - type: icon
+    name: Ellipse 3
+    id: 12:8483
+    url: assets/icons/ellipse_3.svg
+    width: 60.0
+    height: 60.0
+  - type: icon
+    name: Iconsax/Linear/arrowright2
+    id: 12:8484
+    url: assets/icons/iconsaxlineararrowright2.svg
+    width: 32.0
+    height: 32.0

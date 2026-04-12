@@ -1,0 +1,50 @@
+screen:
+  name: Frame 104
+  children:
+  - type: stack
+    id: 11185:583
+    x: 3432.0
+    y: 2666.0
+    background: '#000000'
+    width: 194.03965759277344
+    height: 22.0
+    children:
+    - type: text
+      value: Didn’t receive a code?
+      id: 11185:584
+      x: 3432.0
+      y: 2666.0
+      size: 12.0
+      fontWeight: 500
+      fontFamily: Montserrat
+      color: '#434C6D'
+      align: center
+    - type: column
+      id: 11185:585
+      x: 3559.09814453125
+      y: 2670.0
+      spacing: 2.0
+      background: '#000000'
+      width: 66.94151306152344
+      height: 15.0
+      children:
+      - type: text
+        value: Resend
+        id: 11185:586
+        x: 3559.09814453125
+        y: 2670.0
+        size: 12.0
+        fontWeight: 700
+        fontFamily: Montserrat
+        color: '#284243'
+        align: center
+  - type: text
+    value: 01:29
+    id: 11185:587
+    x: 3766.0
+    y: 2666.0
+    size: 12.0
+    fontWeight: 500
+    fontFamily: Montserrat
+    color: '#8E8EA9'
+    align: center
