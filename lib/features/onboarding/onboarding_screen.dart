@@ -61,88 +61,114 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Expanded(
-            child: PageView.builder(
-              controller: _pageController,
-              onPageChanged: (i) => setState(() => _currentPage = i),
-              itemCount: _pages.length,
-              itemBuilder: (_, i) => OnboardingPageWidget(data: _pages[i]),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 32.h),
-            child: Column(
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final isCompactHeight = constraints.maxHeight < 760;
+            final horizontalPadding = constraints.maxWidth < 360 ? 16.w : 24.w;
+            final ctaWidth = (constraints.maxWidth - (horizontalPadding * 2))
+                .clamp(160.0, 260.0)
+                .toDouble();
+
+            return Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(_pages.length, (i) {
-                    final active = _currentPage == i;
-                    return AnimatedContainer(
-                      duration: const Duration(milliseconds: 300),
-                      margin: EdgeInsets.symmetric(horizontal: 4.w),
-                      width: active ? 24.w : 10.w,
-                      height: 10.h,
-                      decoration: BoxDecoration(
-                        color: active
-                            ? AppColors.tranquilityColor
-                            : AppColors.tranquilityColor.withValues(alpha: 0.3),
-                        borderRadius: BorderRadius.circular(5.r),
-                      ),
-                    );
-                  }),
+                Expanded(
+                  flex: isCompactHeight ? 7 : 8,
+                  child: PageView.builder(
+                    controller: _pageController,
+                    onPageChanged: (i) => setState(() => _currentPage = i),
+                    itemCount: _pages.length,
+                    itemBuilder: (_, i) =>
+                        OnboardingPageWidget(data: _pages[i]),
+                  ),
                 ),
-                SizedBox(height: 24.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    if (_currentPage < _pages.length - 1)
-                      TextButton(
-                        onPressed: _skip,
-                        child: Text(
-                          'skip',
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            color: AppColors.tranquilityColor.withValues(
-                              alpha: 0.6,
-                            ),
-                            fontFamily: 'Inter',
+                Expanded(
+                  flex: isCompactHeight ? 3 : 2,
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(
+                        horizontalPadding,
+                        0,
+                        horizontalPadding,
+                        24.h,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: List.generate(_pages.length, (i) {
+                              final active = _currentPage == i;
+                              return AnimatedContainer(
+                                duration: const Duration(milliseconds: 300),
+                                margin: EdgeInsets.symmetric(horizontal: 4.w),
+                                width: active ? 24.w : 10.w,
+                                height: 10.h,
+                                decoration: BoxDecoration(
+                                  color: active
+                                      ? AppColors.tranquilityColor
+                                      : AppColors.tranquilityColor.withValues(
+                                          alpha: 0.3,
+                                        ),
+                                  borderRadius: BorderRadius.circular(5.r),
+                                ),
+                              );
+                            }),
                           ),
-                        ),
-                      )
-                    else
-                      const SizedBox.shrink(),
-                    _currentPage < _pages.length - 1
-                        ? GestureDetector(
-                            onTap: _next,
-                            child: Container(
-                              width: 60.w,
-                              height: 60.w,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: AppColors.tranquilityColor,
-                              ),
-                              child: Icon(
-                                Icons.arrow_forward,
-                                color: Colors.white,
-                                size: 24.sp,
+                          SizedBox(height: 24.h),
+                          if (_currentPage < _pages.length - 1)
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextButton(
+                                  onPressed: _skip,
+                                  child: Text(
+                                    'skip',
+                                    style: TextStyle(
+                                      fontSize: 16.sp,
+                                      color: AppColors.tranquilityColor
+                                          .withValues(alpha: 0.6),
+                                      fontFamily: 'Inter',
+                                    ),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: _next,
+                                  child: Container(
+                                    width: 60.w,
+                                    height: 60.w,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: AppColors.tranquilityColor,
+                                    ),
+                                    child: Icon(
+                                      Icons.arrow_forward,
+                                      color: Colors.white,
+                                      size: 24.sp,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          else
+                            Center(
+                              child: AppPrimaryButton(
+                                buttonText: 'Get Started',
+                                buttonColor: AppColors.tranquilityColor,
+                                onPress: _next,
+                                width: ctaWidth,
+                                height: 56.h,
                               ),
                             ),
-                          )
-                        : AppPrimaryButton(
-                            buttonText: 'Get Started',
-                            buttonColor: AppColors.tranquilityColor,
-                            onPress: _next,
-                            width: 200.w,
-                            height: 56.h,
-                          ),
-                  ],
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ],
-            ),
-          ),
-        ],
+            );
+          },
+        ),
       ),
     );
   }
