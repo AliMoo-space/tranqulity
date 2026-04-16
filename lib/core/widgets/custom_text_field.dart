@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
+import 'package:tranqulity/core/styling/app_dimensions.dart';
+import 'package:tranqulity/core/styling/app_styles.dart';
 
 class CustomTextField extends StatefulWidget {
   final String? hintText;
@@ -53,33 +55,32 @@ class _CustomTextFieldState extends State<CustomTextField> {
         cursorColor: AppColors.primaryColor,
         decoration: InputDecoration(
           hintText: widget.hintText ?? "",
-          hintStyle: TextStyle(
-            fontSize: 15.sp,
-            color: const Color(0xff8391A1),
-            fontWeight: FontWeight.w500,
-          ),
+          hintStyle: AppStyles.label15MediumMutedStyle,
           contentPadding: EdgeInsets.symmetric(
-            horizontal: 18.w,
-            vertical: 18.h,
+            horizontal: (AppDimensions.lg + 2).w,
+            vertical: (AppDimensions.lg + 2).h,
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
-            borderSide: const BorderSide(color: Color(0xffE8ECF4), width: 1),
+            borderRadius: BorderRadius.circular(AppDimensions.inputRadius.r),
+            borderSide: const BorderSide(
+              color: AppColors.borderColor,
+              width: 1,
+            ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(AppDimensions.inputRadius.r),
             borderSide: BorderSide(color: AppColors.primaryColor, width: 1),
           ),
           errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(AppDimensions.inputRadius.r),
             borderSide: const BorderSide(color: Colors.red, width: 1),
           ),
           focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(AppDimensions.inputRadius.r),
             borderSide: const BorderSide(color: Colors.red, width: 1),
           ),
           filled: true,
-          fillColor: const Color(0xffF7F8F9),
+          fillColor: AppColors.surfaceColor,
           suffixIcon: widget.isPassword == true
               ? IconButton(
                   onPressed: () {

@@ -5,6 +5,41 @@ import 'package:tranqulity/core/styling/app_colors.dart';
 import 'package:tranqulity/core/styling/app_fonts.dart';
 
 class AppStyles {
+  static TextStyle heading24BoldStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColors.headingTextColor,
+  );
+
+  static TextStyle body16RegularStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+  );
+
+  static TextStyle body16MediumStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.blackColor,
+  );
+
+  static TextStyle label15MediumMutedStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.secondaryColor,
+  );
+
+  static TextStyle label16SemiBoldOnPrimaryStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.whiteColor,
+  );
+
   static TextStyle primaryHeadLinesStyle = TextStyle(
     fontFamily: AppFonts.mainFontName,
     fontSize: 30.sp,

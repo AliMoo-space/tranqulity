@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
+import 'package:tranqulity/core/styling/app_styles.dart';
 import 'package:tranqulity/core/widgets/spacing_widgets.dart';
 
-class PrimrayButtonWidget extends StatelessWidget {
+class AppPrimaryButton extends StatelessWidget {
   final String? buttonText;
   final Color? buttonColor;
   final double? width;
@@ -15,7 +16,7 @@ class PrimrayButtonWidget extends StatelessWidget {
   final Widget? trailingIcon;
   final void Function()? onPress;
   final bool isLoading;
-  const PrimrayButtonWidget({
+  const AppPrimaryButton({
     super.key,
     this.buttonText,
     this.buttonColor,
@@ -54,9 +55,8 @@ class PrimrayButtonWidget extends StatelessWidget {
                 icon != null ? const WidthSpace(8) : const SizedBox.shrink(),
                 Text(
                   buttonText ?? "",
-                  style: TextStyle(
-                    color: textColor ?? Colors.white,
-                    fontWeight: FontWeight.w500,
+                  style: AppStyles.body16MediumStyle.copyWith(
+                    color: textColor ?? AppColors.whiteColor,
                     fontSize: fontSize ?? 16.sp,
                   ),
                 ),
@@ -68,4 +68,22 @@ class PrimrayButtonWidget extends StatelessWidget {
             ),
     );
   }
+}
+
+@Deprecated('Use AppPrimaryButton instead')
+class PrimrayButtonWidget extends AppPrimaryButton {
+  const PrimrayButtonWidget({
+    super.key,
+    super.buttonText,
+    super.buttonColor,
+    super.width,
+    super.height,
+    super.bordersRadius,
+    super.fontSize,
+    super.textColor,
+    super.icon,
+    super.trailingIcon,
+    super.onPress,
+    super.isLoading,
+  });
 }

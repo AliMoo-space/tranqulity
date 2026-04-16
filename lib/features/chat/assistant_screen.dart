@@ -136,7 +136,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
                     HeightSpace(24),
 
                     Center(
-                      child: PrimrayButtonWidget(
+                      child: AppPrimaryButton(
                         buttonText: 'Start Chat',
                         buttonColor: AppColors.tranquilityColor,
                         bordersRadius: 16,

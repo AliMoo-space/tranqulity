@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tranqulity/core/routing/app_routes.dart';
 import 'package:tranqulity/core/styling/app_assets.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
+import 'package:tranqulity/core/styling/app_styles.dart';
 import 'package:tranqulity/core/widgets/custom_text_field.dart';
 import 'package:tranqulity/core/widgets/primary_button_widget.dart';
 import 'package:tranqulity/core/widgets/spacing_widgets.dart';
+import 'package:tranqulity/features/auth/widgets/auth_social_login_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -52,27 +53,13 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // ── Header / branding area ─────────────────────────────────
-              Container(
+              HeightSpace(52),
+              Image.asset(
+                AppAssets.loginImage,
                 width: double.infinity,
-                height: 200.h,
-                color: AppColors.tranquilityColor,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Tranquility',
-                      style: TextStyle(
-                        fontFamily: 'Mystery Quest',
-                        fontSize: 42.sp,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+                height: 180.h,
+                fit: BoxFit.cover,
               ),
-
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Column(
@@ -82,11 +69,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     Text(
                       'Welcome To',
-                      style: TextStyle(
-                        fontFamily: 'Inter',
+                      style: AppStyles.body16MediumStyle.copyWith(
                         fontSize: 20.sp,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
                       ),
                     ),
                     Text(
@@ -94,14 +78,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(
                         fontFamily: 'Mystery Quest',
                         fontSize: 36.sp,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.bold,
                         color: AppColors.tranquilityColor,
                       ),
                     ),
-
                     HeightSpace(24),
-
-                    // ── Email field ───────────────────────────────────────
                     CustomTextField(
                       hintText: 'Email',
                       controller: _emailController,
@@ -111,10 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         return null;
                       },
                     ),
-
                     HeightSpace(16),
-
-                    // ── Password field ────────────────────────────────────
                     CustomTextField(
                       hintText: 'Password',
                       controller: _passwordController,
@@ -129,8 +107,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
 
                     HeightSpace(8),
-
-                    // ── Forget password ───────────────────────────────────
                     Align(
                       alignment: Alignment.centerRight,
                       child: GestureDetector(
@@ -138,9 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             context.push(AppRoutes.forgetPasswordScreen),
                         child: Text(
                           'Forget Password?',
-                          style: TextStyle(
-                            fontFamily: 'Inter',
-                            fontSize: 16.sp,
+                          style: AppStyles.body16MediumStyle.copyWith(
                             fontWeight: FontWeight.w700,
                             color: AppColors.tranquilityColor,
                           ),
@@ -152,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     // ── Log In button ─────────────────────────────────────
                     Center(
-                      child: PrimrayButtonWidget(
+                      child: AppPrimaryButton(
                         buttonText: 'Log In',
                         buttonColor: AppColors.tranquilityColor,
                         isLoading: _isLoading,
@@ -168,11 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onTap: () => context.push(AppRoutes.registerScreen),
                         child: RichText(
                           text: TextSpan(
-                            style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 16.sp,
-                              color: Colors.black,
-                            ),
+                            style: AppStyles.body16RegularStyle,
                             children: [
                               const TextSpan(text: "Don't have an account ?  "),
                               TextSpan(
@@ -193,46 +163,44 @@ class _LoginScreenState extends State<LoginScreen> {
                     // ── Divider ───────────────────────────────────────────
                     Row(
                       children: [
-                        Expanded(
-                            child: Divider(color: Colors.grey.shade300)),
+                        Expanded(child: Divider(color: Colors.grey.shade300)),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           child: Text(
                             'Or continue with',
-                            style: TextStyle(
+                            style: AppStyles.grey12MediumStyle.copyWith(
                               fontSize: 14.sp,
                               color: Colors.grey,
-                              fontFamily: 'Inter',
                             ),
                           ),
                         ),
-                        Expanded(
-                            child: Divider(color: Colors.grey.shade300)),
+                        Expanded(child: Divider(color: Colors.grey.shade300)),
                       ],
                     ),
 
                     HeightSpace(16),
 
                     // ── Google login ──────────────────────────────────────
-                    _SocialLoginButton(
-                      label: 'Login With Google',
+                    // AuthSocialLoginButton(
+                    //   label: 'Login With Google',
+                    //   color: const Color(0xff35B542),
+                    //   iconPath: AppAssets.google,
+                    //   onTap: () {
+                    //     // TODO: implement Google login
+                    //   },
+                    // ),
+                    SocialButton(
                       color: const Color(0xff35B542),
-                      iconPath: AppAssets.google,
-                      onTap: () {
-                        // TODO: implement Google login
-                      },
+                      icon: AppAssets.google,
+                      text: 'Login With Google',
                     ),
-
                     HeightSpace(12),
 
                     // ── Facebook login ────────────────────────────────────
-                    _SocialLoginButton(
-                      label: 'Login With Facebook',
-                      color: const Color(0xff518EF8),
-                      iconPath: AppAssets.facebook,
-                      onTap: () {
-                        // TODO: implement Facebook login
-                      },
+                    SocialButton(
+                      color: const Color(0xff1877F2),
+                      icon: AppAssets.facebook,
+                      text: 'Login With Facebook',
                     ),
 
                     HeightSpace(32),
@@ -241,60 +209,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Helper widget
-// ---------------------------------------------------------------------------
-class _SocialLoginButton extends StatelessWidget {
-  final String label;
-  final Color color;
-  final String iconPath;
-  final VoidCallback onTap;
-
-  const _SocialLoginButton({
-    required this.label,
-    required this.color,
-    required this.iconPath,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 331.w,
-        height: 56.h,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(8.r),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              iconPath,
-              width: 24.w,
-              height: 24.h,
-              colorFilter:
-                  const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-            ),
-            SizedBox(width: 12.w),
-            Text(
-              label,
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-              ),
-            ),
-          ],
         ),
       ),
     );

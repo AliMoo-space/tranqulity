@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tranqulity/core/routing/app_routes.dart';
 import 'package:tranqulity/core/styling/app_assets.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
+import 'package:tranqulity/core/styling/app_styles.dart';
+import 'package:tranqulity/features/home/widgets/home_drawer_item.dart';
 
 /// App Drawer (maps to drawer.yaml) – shows user info header and menu items.
 class AppDrawer extends StatelessWidget {
@@ -28,24 +29,22 @@ class AppDrawer extends StatelessWidget {
                 CircleAvatar(
                   radius: 56.r,
                   backgroundColor: Colors.white.withValues(alpha: 0.2),
-                  backgroundImage:
-                      const AssetImage(AppAssets.personPlaceholder),
+                  backgroundImage: const AssetImage(
+                    AppAssets.personPlaceholder,
+                  ),
                 ),
                 SizedBox(height: 12.h),
                 Text(
                   'Sara',
-                  style: TextStyle(
-                    fontFamily: 'Inter',
-                    fontSize: 18.sp,
+                  style: AppStyles.black18BoldStyle.copyWith(
+                    color: AppColors.whiteColor,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 4.h),
                 Text(
                   '01027545631',
-                  style: TextStyle(
-                    fontFamily: 'Inter',
+                  style: AppStyles.grey12MediumStyle.copyWith(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
                     color: Colors.white70,
@@ -62,7 +61,7 @@ class AppDrawer extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(height: 8.h),
-                  _DrawerItem(
+                  HomeDrawerItem(
                     svgPath: AppAssets.aboutUs,
                     label: 'About Us',
                     onTap: () {
@@ -70,7 +69,7 @@ class AppDrawer extends StatelessWidget {
                       context.push(AppRoutes.aboutUsScreen);
                     },
                   ),
-                  _DrawerItem(
+                  HomeDrawerItem(
                     svgPath: AppAssets.rate,
                     label: 'Rate Our App',
                     onTap: () {
@@ -78,11 +77,12 @@ class AppDrawer extends StatelessWidget {
                       // TODO: Open app store rating
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                            content: Text('Rate Our App – coming soon!')),
+                          content: Text('Rate Our App – coming soon!'),
+                        ),
                       );
                     },
                   ),
-                  _DrawerItem(
+                  HomeDrawerItem(
                     svgPath: AppAssets.suggestions,
                     label: 'Suggestions',
                     onTap: () {
@@ -90,7 +90,7 @@ class AppDrawer extends StatelessWidget {
                       context.push(AppRoutes.suggestionsScreen);
                     },
                   ),
-                  _DrawerItem(
+                  HomeDrawerItem(
                     svgPath: AppAssets.enableEasyLogin,
                     label: 'Enable Easy Login',
                     onTap: () {
@@ -98,17 +98,17 @@ class AppDrawer extends StatelessWidget {
                       // TODO: biometric/easy login toggle
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                            content:
-                                Text('Easy Login – toggle coming soon!')),
+                          content: Text('Easy Login – toggle coming soon!'),
+                        ),
                       );
                     },
                   ),
                   const Spacer(),
                   // Logout (red)
-                  _DrawerItem(
+                  HomeDrawerItem(
                     svgPath: AppAssets.logOut,
                     label: 'Logout',
-                    labelColor: const Color(0xffFF3A3A),
+                    labelColor: AppColors.dangerColor,
                     onTap: () {
                       Navigator.pop(context);
                       context.go(AppRoutes.loginScreen);
@@ -120,63 +120,6 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Drawer item
-// ---------------------------------------------------------------------------
-class _DrawerItem extends StatelessWidget {
-  final String svgPath;
-  final String label;
-  final Color? labelColor;
-  final VoidCallback onTap;
-
-  const _DrawerItem({
-    required this.svgPath,
-    required this.label,
-    this.labelColor,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final color = labelColor ?? Colors.black87;
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        margin: EdgeInsets.only(bottom: 12.h),
-        height: 56.h,
-        decoration: BoxDecoration(
-          color: AppColors.tranquilityColor.withValues(alpha: 0.08),
-          borderRadius: BorderRadius.circular(8.r),
-        ),
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        child: Row(
-          children: [
-            SvgPicture.asset(
-              svgPath,
-              width: 22.w,
-              height: 22.h,
-              colorFilter: ColorFilter.mode(
-                labelColor ?? AppColors.tranquilityColor,
-                BlendMode.srcIn,
-              ),
-            ),
-            SizedBox(width: 12.w),
-            Text(
-              label,
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w500,
-                color: color,
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }

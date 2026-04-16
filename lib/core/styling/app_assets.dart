@@ -36,4 +36,7 @@ class AppAssets {
   static const String onBoarding3 = '${_imagePath}on_boarding3.png';
   static const String googleImg = '${_imagePath}google.png';
   static const String facebookImg = '${_imagePath}facebook.png';
+  static const String loginImage = '${_imagePath}login.png';
+  static const String forgotPasswordImage = '${_imagePath}forget_password.png';
+  static const String otpImage = '${_imagePath}otp.png';
 }

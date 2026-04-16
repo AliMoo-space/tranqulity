@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tranqulity/core/routing/app_routes.dart';
+import 'package:tranqulity/core/styling/app_assets.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
 import 'package:tranqulity/core/widgets/custom_text_field.dart';
 import 'package:tranqulity/core/widgets/primary_button_widget.dart';
@@ -53,8 +54,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             children: [
               // ── Back button ────────────────────────────────────────────
               Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
+                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
                 child: IconButton(
                   onPressed: () => context.pop(),
                   icon: Icon(
@@ -65,24 +65,12 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 ),
               ),
 
-              // ── Illustration placeholder ───────────────────────────────
-              // TODO: replace with actual asset: assets/images/forget_password_illustration
-              Center(
-                child: Container(
-                  width: 382.w,
-                  height: 200.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.tranquilityColor.withValues(alpha: 0.08),
-                    borderRadius: BorderRadius.circular(16.r),
-                  ),
-                  child: Icon(
-                    Icons.lock_reset,
-                    size: 80.sp,
-                    color: AppColors.tranquilityColor.withValues(alpha: 0.5),
-                  ),
-                ),
+              Image.asset(
+                AppAssets.forgotPasswordImage,
+                width: double.infinity,
+                // height: 255.h,
+                fit: BoxFit.cover,
               ),
-
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Column(
@@ -115,7 +103,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                     HeightSpace(32),
 
                     Center(
-                      child: PrimrayButtonWidget(
+                      child: AppPrimaryButton(
                         buttonText: 'Forget Password',
                         buttonColor: AppColors.tranquilityColor,
                         isLoading: _isLoading,

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tranqulity/core/routing/app_routes.dart';
 import 'package:tranqulity/core/styling/app_assets.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
+import 'package:tranqulity/core/styling/app_styles.dart';
 import 'package:tranqulity/features/home/widgets/app_drawer.dart';
 import 'package:tranqulity/features/home/widgets/chats_tab.dart';
+import 'package:tranqulity/features/home/widgets/home_nav_item.dart';
 import 'package:tranqulity/features/home/widgets/profile_tab.dart';
 import 'package:tranqulity/features/home/widgets/quotes_tab.dart';
 
@@ -36,11 +37,7 @@ class _MainScreenState extends State<MainScreen> {
       // ── Tabs ───────────────────────────────────────────────────────────
       body: IndexedStack(
         index: _currentIndex,
-        children: const [
-          ChatsTab(),
-          QuotesTab(),
-          ProfileTab(),
-        ],
+        children: const [ChatsTab(), QuotesTab(), ProfileTab()],
       ),
       // ── Bottom navigation ──────────────────────────────────────────────
       bottomNavigationBar: _buildBottomNav(),
@@ -60,22 +57,10 @@ class _MainScreenState extends State<MainScreen> {
           children: [
             GestureDetector(
               onTap: _openDrawer,
-              child: Icon(
-                Icons.menu,
-                size: 26.sp,
-                color: Colors.black87,
-              ),
+              child: Icon(Icons.menu, size: 26.sp, color: Colors.black87),
             ),
             SizedBox(width: 16.w),
-            Text(
-              _titles[_currentIndex],
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 24.sp,
-                fontWeight: FontWeight.w700,
-                color: const Color(0xff101010),
-              ),
-            ),
+            Text(_titles[_currentIndex], style: AppStyles.heading24BoldStyle),
           ],
         ),
       ),
@@ -92,19 +77,19 @@ class _MainScreenState extends State<MainScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _NavItem(
+          HomeNavItem(
             assetPath: AppAssets.chats,
             label: 'Chats',
             isActive: _currentIndex == 0,
             onTap: () => setState(() => _currentIndex = 0),
           ),
-          _NavItem(
+          HomeNavItem(
             assetPath: AppAssets.quotes,
             label: 'Quotes',
             isActive: _currentIndex == 1,
             onTap: () => setState(() => _currentIndex = 1),
           ),
-          _NavItem(
+          HomeNavItem(
             assetPath: AppAssets.profile,
             label: 'Profile',
             isActive: _currentIndex == 2,
@@ -138,54 +123,6 @@ class _MainScreenState extends State<MainScreen> {
           color: Colors.white,
           size: 28.sp,
         ),
-      ),
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Bottom-nav item
-// ---------------------------------------------------------------------------
-class _NavItem extends StatelessWidget {
-  final String assetPath;
-  final String label;
-  final bool isActive;
-  final VoidCallback onTap;
-
-  const _NavItem({
-    required this.assetPath,
-    required this.label,
-    required this.isActive,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            assetPath,
-            width: 24.w,
-            height: 24.h,
-            colorFilter: ColorFilter.mode(
-              isActive ? Colors.white : Colors.white54,
-              BlendMode.srcIn,
-            ),
-          ),
-          SizedBox(height: 4.h),
-          Text(
-            label,
-            style: TextStyle(
-              fontFamily: 'Inter',
-              fontSize: 12.sp,
-              fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
-              color: isActive ? Colors.white : Colors.white54,
-            ),
-          ),
-        ],
       ),
     );
   }

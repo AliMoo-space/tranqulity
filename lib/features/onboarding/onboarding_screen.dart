@@ -5,6 +5,7 @@ import 'package:tranqulity/core/routing/app_routes.dart';
 import 'package:tranqulity/core/styling/app_assets.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
 import 'package:tranqulity/core/widgets/primary_button_widget.dart';
+import 'package:tranqulity/features/onboarding/widgets/onboarding_page_widget.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -17,20 +18,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-  static const List<_OnboardingData> _pages = [
-    _OnboardingData(
+  static const List<OnboardingPageData> _pages = [
+    OnboardingPageData(
       imagePath: AppAssets.onBoarding1,
       title: 'Feel Free',
       description:
           "because I'm the friendly chatbot here to assist you with anything you need.",
     ),
-    _OnboardingData(
+    OnboardingPageData(
       imagePath: AppAssets.onBoarding2,
       title: 'Ask For Anything',
       description:
           "I'm your friendly neighborhood chatbot ready to assist you with any questions or concerns.",
     ),
-    _OnboardingData(
+    OnboardingPageData(
       imagePath: AppAssets.onBoarding3,
       title: 'Your Secret is Safe',
       description: 'Our platform prioritizes your privacy and security.',
@@ -67,14 +68,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               controller: _pageController,
               onPageChanged: (i) => setState(() => _currentPage = i),
               itemCount: _pages.length,
-              itemBuilder: (_, i) => _OnboardingPage(data: _pages[i]),
+              itemBuilder: (_, i) => OnboardingPageWidget(data: _pages[i]),
             ),
           ),
           Padding(
             padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 32.h),
             child: Column(
               children: [
-                // Dot indicators
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(_pages.length, (i) {
@@ -104,7 +104,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           'skip',
                           style: TextStyle(
                             fontSize: 16.sp,
-                            color: AppColors.tranquilityColor.withValues(alpha: 0.6),
+                            color: AppColors.tranquilityColor.withValues(
+                              alpha: 0.6,
+                            ),
                             fontFamily: 'Inter',
                           ),
                         ),
@@ -128,7 +130,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                           )
-                        : PrimrayButtonWidget(
+                        : AppPrimaryButton(
                             buttonText: 'Get Started',
                             buttonColor: AppColors.tranquilityColor,
                             onPress: _next,
@@ -140,74 +142,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ],
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Data model
-// ---------------------------------------------------------------------------
-class _OnboardingData {
-  final String imagePath;
-  final String title;
-  final String description;
-
-  const _OnboardingData({
-    required this.imagePath,
-    required this.title,
-    required this.description,
-  });
-}
-
-// ---------------------------------------------------------------------------
-// Single page
-// ---------------------------------------------------------------------------
-class _OnboardingPage extends StatelessWidget {
-  final _OnboardingData data;
-
-  const _OnboardingPage({required this.data});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 16.h),
-          Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16.r),
-              child: Image.asset(
-                data.imagePath,
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          SizedBox(height: 28.h),
-          Text(
-            data.title,
-            style: TextStyle(
-              fontFamily: 'Inter',
-              fontSize: 32.sp,
-              fontWeight: FontWeight.w700,
-              color: Colors.black,
-            ),
-          ),
-          SizedBox(height: 12.h),
-          Text(
-            data.description,
-            style: TextStyle(
-              fontFamily: 'Inter',
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w400,
-              color: Colors.black87,
-            ),
-          ),
-          SizedBox(height: 24.h),
         ],
       ),
     );

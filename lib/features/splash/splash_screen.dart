@@ -23,10 +23,7 @@ class _SplashScreenState extends State<SplashScreen>
       vsync: this,
       duration: const Duration(milliseconds: 1200),
     );
-    _fadeAnim = CurvedAnimation(
-      parent: _animController,
-      curve: Curves.easeIn,
-    );
+    _fadeAnim = CurvedAnimation(parent: _animController, curve: Curves.easeIn);
     _animController.forward();
 
     Future.delayed(const Duration(seconds: 3), () {
@@ -49,7 +46,6 @@ class _SplashScreenState extends State<SplashScreen>
       body: Stack(
         alignment: Alignment.center,
         children: [
-          // TODO: replace with actual asset: assets/icons/ellipse_1.svg
           Center(
             child: Container(
               width: 360.w,

@@ -135,7 +135,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     HeightSpace(40),
 
                     Center(
-                      child: PrimrayButtonWidget(
+                      child: AppPrimaryButton(
                         buttonText: 'Change Password',
                         buttonColor: AppColors.tranquilityColor,
                         isLoading: _isLoading,

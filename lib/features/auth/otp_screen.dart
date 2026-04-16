@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tranqulity/core/routing/app_routes.dart';
+import 'package:tranqulity/core/styling/app_assets.dart';
 import 'package:tranqulity/core/styling/app_colors.dart';
 import 'package:tranqulity/core/widgets/primary_button_widget.dart';
 import 'package:tranqulity/core/widgets/spacing_widgets.dart';
@@ -27,7 +28,7 @@ class _OtpScreenState extends State<OtpScreen> {
   bool _isLoading = false;
 
   // Countdown timer – 90 s  ("01:29" shown in frame_104.yaml)
-  static const int _totalSeconds = 90;
+  static const int _totalSeconds = 30;
   int _secondsLeft = _totalSeconds;
   Timer? _timer;
 
@@ -108,23 +109,11 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
             ),
 
-            // ── Illustration placeholder ─────────────────────────────────
-            // TODO: replace with actual asset: assets/images/otp_illustration
-            Center(
-              child: Container(
-                width: 382.w,
-                height: 180.h,
-                decoration: BoxDecoration(
-                  color: AppColors.tranquilityColor.withValues(alpha: 0.08),
-                  borderRadius: BorderRadius.circular(16.r),
-                ),
-                child: Icon(
-                  Icons.mark_email_read_outlined,
-                  size: 80.sp,
-                  color: AppColors.tranquilityColor.withValues(alpha: 0.5),
-                ),
-              ),
-            ),
+           Image.asset(
+                AppAssets.otpImage,
+                width: double.infinity,
+                fit: BoxFit.cover,
+               ),
 
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -243,7 +232,7 @@ class _OtpScreenState extends State<OtpScreen> {
 
                   // ── Verify button ────────────────────────────────────────
                   Center(
-                    child: PrimrayButtonWidget(
+                    child: AppPrimaryButton(
                       buttonText: 'Verify',
                       buttonColor: AppColors.tranquilityColor,
                       isLoading: _isLoading,

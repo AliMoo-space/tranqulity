@@ -184,7 +184,7 @@ class _SuggestionsScreenState extends State<SuggestionsScreen> {
                     HeightSpace(32),
 
                     Center(
-                      child: PrimrayButtonWidget(
+                      child: AppPrimaryButton(
                         buttonText: 'Submit Suggestion',
                         buttonColor: AppColors.tranquilityColor,
                         isLoading: _isLoading,
